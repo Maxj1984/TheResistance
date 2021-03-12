@@ -1,0 +1,238 @@
+<?php include("cn.php");
+include("email.php")
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="layout/admin/plugins/fontawesome-free/css/all.min.css">
+	  <link rel="stylesheet" href="layout/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  
+ 		<link rel="stylesheet" href="layout/admin/css/adminlte.min.css">
+		<link rel="icon" href="layout/admin/img/diseno.ico">
+		<link rel="stylesheet" href="layout/admin/css/diseño.css">
+	  	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  
+	 	 <link rel="stylesheet" href="layout/admin/css/jquery.Jcrop.css" type="text/css"/>
+		
+		<link rel="stylesheet" href="layout/admin/css/jquery-ui.css">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"> </script>
+		<script src="../js/plugins/piexif.js" type="text/javascript"></script>
+	    <script src="../js/plugins/sortable.js" type="text/javascript"></script>
+	    <script src="../js/fileinput.js" type="text/javascript"></script>
+	    <script src="../js/locales/fr.js" type="text/javascript"></script>
+	    <script src="../js/locales/es.js" type="text/javascript"></script>
+	    <script src="../themes/fas/theme.js" type="text/javascript"></script>
+	    <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
+		
+		
+	</head>
+
+	<body>
+		<div class="card card-dark  collapsed-card">
+			<div class="card-header">
+		        <h2 class="card-title">Solicitud de Empleo</h2>
+		         
+		    </div>
+	   </div>
+
+    <section class="content">
+      <div class="container-fluid">
+       <section class="content">
+			<form role="form"method="post" enctype="multipart/form-data">
+			    <div class="card-body">
+			    
+			     <div class="form-group">
+				            <div class="card card-danger">
+					            <div class="card-header">
+						      		  <h4 class="card-title"><b>DATOS PERSONALES</b></h4><
+					            </div>
+					        </div>
+					        
+					    <form name="formulario" id="formulario">
+							
+							
+							<input type="date" name="dia" min="2010-01-01" max="2016-12-31">
+							<label form="time">Hora:</label>
+							<input type="time" name="usrtime">
+						</form>    
+					        
+					        
+				 </div>
+					<label for="exampleInputEmail1">Nombre Completo</label>
+	                <input type="text"name="nombre" class="form-control name-field" 
+	                required="required"><br>
+	                
+	                <label for="exampleInputEmail1">Correo Electronico</label>
+	                <input type="email"name="correo" class="form-control" id="exampleInputEmail1">
+	                
+	                <label for="exampleInputEmail1">Dirección</label>
+	                <input type="dirección"name="direccion" class="form-control" id="exampleInputEmail1">
+	                
+	                
+	                
+	                <label for="exampleInputEmail1">Número de Telefono</label>
+	                <input type="numero"name="numeros" class="form-control" id="exampleInputEmail1">
+	                
+	                
+	                
+					Fecha de nacimiento: <input type="date" name="fechanac" required>
+					
+					
+	          
+	                
+	 	</div>
+	 
+				 <div class="form-group">
+				            <div class="card card-danger">
+					            <div class="card-header">
+						      		  
+						      		  
+								<form name="formulario" id="formulario">
+
+										Seleccione su Nivel Academico:
+										<datalist id="listas">
+										    <option value="Basicos ">
+										    <option value="Diversificado">
+										    <option value="Universitario">
+										    <option value="Maestria">
+										</datalist>
+										    <input name="Estudios" list="listas">
+								</form>
+							
+					            </div>
+					        </div>
+				 </div>
+				
+					
+	
+					<div>
+						<label>Jornada</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Matutinan</option>
+                          <option>Vespertina</option>
+                          <option>Nocturn</option>
+                        </select>
+					</div>
+				 
+					
+					<div>
+						<label>Puesto que Solicita</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Informatica</option>
+                          <option>Ventas</option>
+                          <option>Contabilidad</option>
+                          <option>Servicio al Cliente</option>
+                          <option>bodega</option>
+                        </select>
+					</div>
+				 
+	                 
+                  <div class="form-group">
+                  	<label for="exampleInputFile">Documento en Pdf</label>
+                  		<div class="custom-file">
+                  			<input type="file"name="cv" class="custom-file-input" id="customFile">
+                  			<label class="custom-file-label" for="customFile">Subir documento</label>
+                  		</div>
+                  		
+                  	
+                  <div class="form-group">
+                  		<label>Fotografía:</label>
+								<input type="file" class="form-control" 
+								name="imagen" id="imagen" maxlength="256" placeholder="Images">
+	
+								<br>
+								<img src=""  id="target"width="150" height="auto">
+
+								<br>
+                  	<! - Forma para recortar ->	
+					<form  onsubmit = "return checkCoords ();">
+				            <input type = "hidden" id = "x" name = "x" />
+				            <input type = "hidden" id = "y" name = "y" />
+				            <input type = "hidden" id = "w" name = "w" />
+				            <input type = "hidden" id = "h" name = "h" />
+				            <input type = "submit" value = "Recortar imagen" />
+				        </form>
+                  
+    				</div>
+                </div>
+                
+                
+                  <div class="card-danger">
+                  <label>Enviar  formulario completo:</label><br>
+                  <input  name="enviar" type="submit" class="btn btn-primary" value="Enviar Formulario"/>
+                  
+                  <input name="enviar2" type=""/>
+                  
+            </div>
+        </form>
+        
+    </section>
+    
+	<script src="../../plugins/jquery/jquery.min.js"></script>
+	<!-
+	<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+	<script src="../../dist/js/adminlte.min.js"></script>
+	<script src="../../dist/js/demo.js"></script>
+	<script type="text/javascript">
+	$(".custom-file-input").on("change", function() {
+	  var fileName = $(this).val().split("\\").pop();
+	  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+	});
+	</script>
+      </div><!-- /.container-fluid -->
+    </section>
+
+
+
+		<!-- jQuery -->
+		<script src="layout/admin/plugins/jquery/jquery.min.js"></script>
+		<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+		<script>
+		  $.widget.bridge('uibutton', $.ui.button)
+		</script>
+		<!-- Bootstrap 4 -->
+		<script src="layout/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- overlayScrollbars -->
+		<script src="layout/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+		<!-- AdminLTE App -->
+		<script src="layout/admin/js/adminlte.js"></script>
+		<!-- AdminLTE for demo purposes -->
+		<script src="layout/admin/js/demo.js"></script>
+		<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+		<script src="layout/admin/js/Chart.min.js"></script>
+
+		<script src="js/jquery.js"> </script>
+		<script src="js/jquery-ui.js"> </script>
+
+		
+		
+</body>
+<script>$(function () {
+	<?php include("cn.php"); ?>
+    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+    
+    var pieData        = {
+      labels: <?php echo json_encode($json); ?>,
+      datasets: [{
+      data: <?php echo json_encode($json2);?>, 
+      backgroundColor :
+       ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc'],}]}
+    
+    var pieOptions     = {maintainAspectRatio : false, responsive : true, }
+    
+    var pieChart = 
+    new Chart(pieChartCanvas, {type: 'pie', data: pieData,options: pieOptions})
+    
+})</script>
+
+</html>
+

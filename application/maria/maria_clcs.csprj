@@ -1,0 +1,19 @@
+
+<codestructure version="1.9.0">
+<phptree>
+<treenode node="mariaController;PHP:Class Name;C:\wamp64\www\Universidad\Proyecto\application\maria\mariaController.php;f0;1;1;16;;;;vpos;;v;;aController;;c;;r;;d0,2;;b0,0;;m0;;e0;;i;;l">
+<treenode node="__construct;PHP:Function Name;C:\wamp64\www\Universidad\Proyecto\application\maria\mariaController.php;f1;4;2;8;;;;vpos;;v;;a;;r;;d1,5;;b0,0;;m0;;e0;;i;;l">
+</treenode>
+<treenode node="index;PHP:Function Name;C:\wamp64\www\Universidad\Proyecto\application\maria\mariaController.php;f1;10;2;13;;;;vpos;;v;;a;;r;;d1,11;;b0,0;;m0;;e0;;i;;l">
+</treenode>
+</treenode>
+<treenode node="usuariosModel;PHP:Class Name;C:\wamp64\www\Universidad\Proyecto\application\maria\mariaModel.php;f0;1;1;12;;;;vpos;;v;;aModel;;c;;r;;d33,1;;b0,0;;m0;;e0;;i;;l">
+<treenode node="__construct;PHP:Function Name;C:\wamp64\www\Universidad\Proyecto\application\maria\mariaModel.php;f1;2;2;4;;;;vpos;;v;;a;;r;;d23,2;;b0,0;;m0;;e0;;i;;l">
+</treenode>
+</treenode>
+</phptree>
+<jstree>
+</jstree>
+<pythontree>
+</pythontree>
+</codestructure>

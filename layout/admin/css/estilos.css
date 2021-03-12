@@ -1,0 +1,55 @@
+.link{
+	float: center;
+  display: inline;
+}
+
+.container img{
+	width: 100%;
+	height: auto;
+
+}
+	header {
+	background: #008700;
+	color;#ffffff;
+}
+	main {
+		background:#aaffff;
+	}
+	class{
+		background: #ffaa00;
+	}
+	article{
+		background: #aaffff;
+	}
+
+	demo{
+		background: #95ffa5;
+	}
+	.color1{
+		background:#005500;
+		color:white;
+	}
+	.color2{
+		background:#00a14e;
+	}
+	aside {
+		background:#55aa00;
+		color:#fff;
+	}
+	prueba{
+		background: #00ff7f
+	}
+	footer {
+		background:#55ff7f;
+		color:#000000;
+	}
+fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    .overflow {
+      height: 200px;
+    }

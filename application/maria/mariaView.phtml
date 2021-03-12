@@ -1,0 +1,307 @@
+<?php
+include("cn.php");
+include("email.php");
+?>
+
+<!--Estilo para Imagen-->
+<style media="screen">
+	#uploadForm,
+	#imagereview{
+		width: 800px;
+		margin: 0 auto;
+	}
+	img{
+		max-width: 600px;
+		height: auto;
+	}
+</style>
+		
+<div class="card card-dark  collapsed-card">
+	<div class="card-header">
+        <h2 class="card-title">Solicitud de Empleo</h2>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+       
+		<form role="form" method="post" enctype="multipart/form-data">
+			<div class="card-body">
+			    
+			     <div class="form-group">
+				            <div class="card card-danger">
+					            <div class="card-header">
+						      		  <h4 class="card-title"><b>DATOS PERSONALES</b></h4><
+					            </div>
+					        </div>
+					        
+					    <form name="formulario" id="formulario">
+							
+							
+							<input type="date" name="dia" min="2010-01-01" max="2016-12-31">
+							<label form="time">Hora:</label>
+							<input type="time" name="usrtime">
+						</form>    
+					        
+					        
+				 </div>
+					<label for="exampleInputEmail1">Nombre Completo</label>
+	                <input type="text"name="nombre" class="form-control name-field" 
+	                required="required"><br>
+	                
+	                <label for="exampleInputEmail1">Correo Electronico</label>
+	                <input type="email"name="correo" class="form-control" id="exampleInputEmail1">
+	                
+	                <label for="exampleInputEmail1">Dirección</label>
+	                <input type="dirección"name="direccion" class="form-control" id="exampleInputEmail1">
+	                
+	                
+	                
+	                <label for="exampleInputEmail1">Número de Telefono</label>
+	                <input type="numero"name="numeros" class="form-control" id="exampleInputEmail1">
+	                
+	                
+	                
+					Fecha de nacimiento: <input type="date" name="fechanac" required>
+					
+	          
+	                
+	 	
+	 
+				 	<div class="form-group">
+				            <div class="card card-danger">
+					            <div class="card-header">
+						      		  
+						      		  
+									<form name="formulario" id="formulario">
+
+										Seleccione su Nivel Academico:
+										<datalist id="listas">
+										    <option value="Basicos ">
+										    <option value="Diversificado">
+										    <option value="Universitario">
+										    <option value="Maestria">
+										</datalist>
+										    <input name="Estudios" list="listas">
+									</form>
+							
+					            </div>
+					        </div>
+				 	</div>
+				
+					
+	
+					<div>
+						<label>Jornada</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Matutina</option>
+                          <option>Vespertina</option>
+                          <option>Nocturna</option>
+                        </select>
+					</div>
+				 
+					
+					<div>
+						<label>Puesto que Solicita</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Ventas</option>
+                          <option>Servicio al cliente</option>
+                          <option>Informatica</option>
+                          <option>Analista/option>
+                          
+                        </select>
+					</div>
+				 
+				 <div class="form-group">
+				
+				 
+                  	<label for="exampleInputFile">Documento en Pdf</label>
+                  		<div class="custom-file">
+                  			<input type="file"name="cv" class="custom-file-input" id="customFile">
+                  			<label class="custom-file-label" for="customFile">Subir documento</label>
+                  		</div>
+				 
+				 
+				 
+                  		
+				<div class="container my-4">
+					<hr>
+					    <form enctype="multipart/form-data">
+					        <div class="file-loading">
+					         	<input  id="file-0a" class="file" type="file"name="cv" multiple data-min-file-count="1" data-theme="fas">
+					            <input type="file"name="cv" class="custom-file-input" id="customFile">
+					        </div>
+					        <br>
+					        <button type="reset" class="btn btn-outline-secondary">Reiniciar</button>
+					    </form>
+				</div>
+				
+							
+	
+            
+
+                  	<div class="form-group">
+                  		<label>Fotografía:</label>
+								<input type="file" class="form-control" 
+								name="imagen" id="imagen" maxlength="256" placeholder="Images">
+	
+								<br>
+								<img src=""  id="target"width="150" height="auto">
+
+								<br>
+                  	<! - Forma para recortar ->	
+					<form onsubmit = "return checkCoords ();">
+				            <input type = "hidden" id = "x" name = "x" />
+				            <input type = "hidden" id = "y" name = "y" />
+				            <input type = "hidden" id = "w" name = "w" />
+				            <input type = "hidden" id = "h" name = "h" />
+				            <input type = "submit" value = "Recortar imagen" />
+				    </form>
+                  
+    				</div>
+                </div>
+                
+                
+                <div class="card-danger">
+                  <label>Enviar  formulario completo:</label><br>
+                  <input  name="enviar" type="submit" 
+                  class="btn btn-primary" value="Enviar Formulario"/>
+           		</div>
+        	
+        	</div>
+        </form>
+    </div>
+    
+</section>
+
+
+
+<script src="layout/admin/js/jquery.Jcrop.min.js"></script>
+<script src="layout/admin/js/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+<! - Bootstrap 4.x es compatible. También puede utilizar las versiones de bootstrap css 3.3.x ->
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin = "anónimo" >   
+		<link href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/css/fileinput.min.css" media = "all" rel = "stylesheet" type = "text / css " />     
+		<! - si usa la orientación RTL (derecha a izquierda), cargue el archivo CSS RTL después de fileinput.css descomentando a continuación ->
+		<! - link href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/css/fileinput-rtl.min.css" media = "all" rel = "stylesheet" tipo = "texto / css" / ->
+		<! - la biblioteca de iconos de fuentes impresionantes si se usa con el tema `fas` (o Bootstrap 4.x). Tenga en cuenta que los iconos predeterminados utilizados en el complemento son glifos que se incluyen solo con Bootstrap 3.x. ->
+		<link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin = "anonymous" >   
+		<script src = "https://code.jquery.com/jquery-3.3.1.min.js" crossorigin = "anónimo" > </script>  
+		<! - piexif.min.js es necesario para orientar automáticamente archivos de imagen O para restaurar datos exif en imágenes redimensionadas y cuando
+		    desea cambiar el tamaño de las imágenes antes de cargarlas. Esto debe cargarse antes de fileinput.min.js ->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/plugins/piexif.min.js" type = "text / javascript" > </script>  
+		<! - sortable.min.js solo es necesario si desea ordenar / reorganizar archivos en la vista previa inicial. 
+		    Esto debe cargarse antes de fileinput.min.js ->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/plugins/sortable.min.js" type = "text / javascript" > </script>  
+		<! - popper.min.js a continuación es necesario si usa bootstrap 4.x (para popover y tooltips). También puede usar bootstrap js
+		   Versiones 3.3.x sin popper.min.js. ->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" > </script> 
+		<! - Bootstrap.min.js a continuación es necesario si desea hacer zoom y obtener una vista previa del contenido del archivo en un modo de detalle
+		    diálogo. Bootstrap 4.x es compatible. También puede utilizar las versiones de bootstrap js 3.3.x. ->
+		<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin = "anónimo" > </script>  
+		<! - el archivo de complemento de entrada de archivo principal ->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/fileinput.min.js" > </script> 
+		<! - se necesita el siguiente script de tema para usar el tema Font Awesome 5.x (`fas`) ->
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/themes/fas/theme.min.js"> </ script - >
+		
+		<link rel="stylesheet" href="https://unpkg.com/jcrop/dist/jcrop.css">
+	<script src="https://unpkg.com/jcrop"></script>
+	
+
+
+    
+	
+	<script type="text/javascript">
+	$(".custom-file-input").on("change", function() {
+	  var fileName = $(this).val().split("\\").pop();
+	  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+	});
+	</script>
+      
+
+<!--Previsualizar imagen-->
+<script>
+	function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      // Asignamos el atributo 
+      $('#target').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+
+$("#imagen").change(function() {
+  readURL(this);
+});
+
+  
+
+</script>
+	
+	
+<!--script de Jcrop-->
+<script type="text/javascript">
+
+var x='';
+var y='';
+var w='';
+var h='';
+
+function updateCoords(c)
+  {
+    $('#x').val(c.x);
+    $('#y').val(c.y);
+    $('#w').val(c.w);
+    $('#h').val(c.h);
+  };
+
+  function checkCoords()
+  {
+    if (parseInt($('#w').val())) return true;
+    alert('Please select a crop region then press submit.');
+    return false;
+  };
+
+function showCoords(c)
+  {
+      // variables can be accessed here as
+      // c.x, c.y, c.x2, c.y2, c.w, c.h
+      //alert(c.x+" "+c.y+" "+c.w+" "+c.h);
+      x=c.x;
+      y=c.y;
+      w=c.w;
+      h=c.h; 
+  };
+
+
+  jQuery(function($){
+    $('#crop').Jcrop({
+    	onSelect: showCoords,
+    	bgColor:     'black',
+        bgOpacity:   .4,
+        aspectRatio: 1
+      
+    });
+     });
+    
+    function enviar(){
+    	$.ajax({
+    		url: './recorte.php',
+    		type: 'POST',
+    		data:'x='+x+'&y='+y+'&w='+w+'&h='+h,
+    		success:function(rpt){
+    			$("#destino").html(rpt);
+    		}
+    		
+    	});
+    	
+    }
+ 
+
+</script>
+

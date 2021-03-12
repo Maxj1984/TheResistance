@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+		<link rel="stylesheet" type="text/css" media="screen"
+		href="libraries/jqgrid/text/css/ui-lightness/jquery-ui-1.10.1.custom.min.css" />
+		
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.14.0/css/ui.jqgrid.min.css"/>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+		<script src="libraries/jqgrid/js/i18n/grid.locale-es.js" type="text/javascript"> </script>
+	<script type="text/javascript" language="javascript" 
+	src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.26/build/pdfmake.min.js">	</script>
+	<script type="text/javascript" language="javascript" 
+	src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.26/build/vfs_fonts.js"></script>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.14.0/jquery.jqgrid.min.js"></script>
+
+<section class="content">
+      <div class="card card-info ">
+        <div class="card-header">
+          <h3 class="card-title">PRUEBA JQGRID</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+        	<table id="list3"></table>
+			<div id="pager3"></div>
+			<br>
+        </div>
+      </div>
+    </section>
+
+
+
+<!--script para llamar datos usando Json -->
+	<script type="text/javascript">
+		jQuery("#list3").jqGrid({ 
+        sorting: true,
+        paging: true,
+			//url:'server.php',
+			//datatype: "json",
+			colNames:['ID','Nombre', 'Telefono','Dirección', 'Correo','Puesto','Fotografía','Curriculum','Estado'],
+			colModel:[
+				{name:'id_solicitud',index:'id_solicitud', sorttype:"int", width:'60px'},
+				{name:'descripcion',index:'descripcion', sorttype:"char",editable: true},
+				{name:'telefono',index:'telefono', sorttype:"char",editable: true},
+				{name:'direccion',index:'direccion', editable: true},
+				{name:'correo',index:'correo', align:"center",sorttype:"char",editable: true},
+				{name:'puesto',index:'puesto', align:"center",sorttype:"char",editable: true},
+				{name:'fotografia',index:'fotografia', align:"center",width: 60, height:80, editable: true,
+                        edittype: 'image',
+                        editoptions: {src: ''},
+                        formatter: function (cell, options) {
+                            return '<img src="application/jqgrid2/avatar5.png"width="40" height="40"/>';
+                        }},
+				{name:'curriculum',index:'curriculum', editable: true, edittype:'file',editoptions:'',},
+				{name:'estado',index:'estado', align:"center",sortable:false,editable: true,width:'60px'}
+			],
+			data: [{ id_solicitud: 10000, descripcion: "Alumno Base", Telefono: 99999999, 
+			direccion:"Ciudad de Guatemala", correo:"alumnobase1@alumno.com", puesto: "Programador"
+			,fotografía:"",curriculum:"",estado:"A" },
+			],
+			rowNum:20,
+			rowList:[10,20,30, 40 , 50],
+			pager: '#pager3',
+			sortname: 'invid',
+			viewrecords: true,
+			sortorder: "asc",
+			loadonce: true,
+			caption: "JqGrid con Json",
+			
+			//editurl:'btnaccion.php'
+		});
+		
+			
+		
+		//barra de acciones propias de JqGrid, se puede invocar un metodo en php
+		jQuery("#list3").navGrid("#pager3",
+			{
+				add: true, edit: true, del:true, refresh:true,closeOnEscape: true,
+				beforeRefresh: function() {$("#list3").jqGrid('setGridParam',
+				{url:'server.php',datatype:"json"}).trigger('reloadGrid');
+				},
+				afterAdd:function() {$("#list3").jqGrid('setGridParam',
+					{url:'server.php',datatype:"json"}).trigger('reloadGrid');
+				},
+			}
+		);
+		
+		
+	</script>

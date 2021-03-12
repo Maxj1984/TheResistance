@@ -1,0 +1,273 @@
+<?php include("conexion.php");
+include("enviar.php")
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="layout/admin/plugins/fontawesome-free/css/all.min.css">
+	  <link rel="stylesheet" href="layout/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  
+ 		<link rel="stylesheet" href="layout/admin/css/adminlte.min.css">
+		<link rel="icon" href="layout/admin/img/diseno.ico">
+		<link rel="stylesheet" href="layout/admin/css/diseño.css">
+	  	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="layout/admin/css/jquery.Jcrop.css" type="text/css"/>
+		<link rel="stylesheet" href="layout/admin/css/jquery-ui.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		
+		
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin = "anónimo" >   
+		<link href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/css/fileinput.min.css" media = "all" rel = "stylesheet" type = "text / css " />  
+		<link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin = "anonymous" >
+		<script src = "https://code.jquery.com/jquery-3.3.1.min.js" crossorigin = "anónimo" > </script>  
+	
+		
+		
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"> </script>
+		<script src="../js/plugins/piexif.js" type="text/javascript"></script>
+	    <script src="../js/plugins/sortable.js" type="text/javascript"></script>
+	    <script src="../js/fileinput.js" type="text/javascript"></script>
+	    <script src="../js/locales/fr.js" type="text/javascript"></script>
+	    <script src="../js/locales/es.js" type="text/javascript"></script>
+	    <script src="../themes/fas/theme.js" type="text/javascript"></script>
+	    <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
+		
+		
+		<script>
+			window.onload = function () {
+
+			var chart = new CanvasJS.Chart("chartContainer", {
+				animationEnabled: true,
+				theme: "light2", // "light1", "light2", "dark1", "dark2"
+				title:{
+					text: "Grafica de Empleados"
+				},
+				data: [{        
+					type: "column",  
+					showInLegend: true, 
+					legendMarkerColor: "grey",
+					legendText: "puestos solicitados",
+					dataPoints: [      
+						{ y: 4, label: "informatica" },
+						{ y: 5,  label: "ventas" },
+						{ y: 6,  label: "contabilidad" },
+						{ y: 7,  label: "servicio al cliente" },
+						{ y: 8,  label: "bodegas" },
+						
+					]
+				}]
+			});
+			chart.render();
+
+			}
+</script>
+		
+		
+	
+		
+	</head>
+
+	<body>
+		<div class="card card-primary  collapsed-card">
+			<div class="card-header">
+		         <FONT FACE="times new roman"><h2>Solicitud de Empleo</h2></FONT>
+		    </div>
+	   </div>
+
+    <section class="content">
+      <div class="container-fluid">
+       <section class="content">
+			<form role="form"method="post" enctype="multipart/form-data">
+			    <div class="card-body">
+			    
+					            
+					        
+					        
+				 </div>
+				 
+				 <div class="card card-success">
+					    <div class="card-header">
+							<label for="exampleInputEmail1">Nombre:</label>
+			                <input type="text"name="nombre" class="form-control name-field" 
+			                required="required">
+			                <label for="exampleInputEmail1">e-mail</label>
+			                <input type="email"name="correo" class="form-control" id="exampleInputEmail1">
+			                <label for="exampleInputEmail1"><b>Domicilio</b></label>
+			                <input type="dirección"name="direccion" class="form-control" id="exampleInputEmail1">
+			                <label for="exampleInputEmail1">Telefono</label>
+			                <input type="numero"name="numeros" class="form-control" id="exampleInputEmail1">
+			                <label for="exampleInputEmail1">Nacionalid</label>
+			                <input type="numero"name="numeros" class="form-control" id="exampleInputEmail1">
+			            </div>
+	            </div>  
+	                
+	
+					
+					
+	          
+	                
+	 	</div>
+	 
+				 <div class="form-group">
+				            <div class="card card-dark">
+					            <div class="card-header">
+						      		  
+						      		  
+								<form name="formulario" id="formulario">
+
+										sexo:
+										<datalist id="listas">
+										    <option value="Femenino">
+										    <option value="Masculino">
+										</datalist>
+										    <input name="sex" lista="lista">
+								</form>
+					            </div>
+					        </div>
+				 </div>
+			
+					<div>
+						<label>Vacante</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Informatica</option>
+                          <option>Ventas</option>
+                          <option>Contabilidad</option>
+                          <option>Servicio al Cliente</option>
+                          <option>bodega</option>
+                        </select>
+					</div>
+				     
+                  <div class="form-group">
+                  	<label for="exampleInputFile"><b>Adjunte su Cv:</b></label>
+                  		<div class="custom-file">
+                  			<input type="file"name="cv" class="custom-file-input" id="customFile">
+                  			<label class="custom-file-label" for="customFile">Subir Archivos</label>
+                  			
+                  		</div>
+                </div>
+                        <label>Escriba su experencia Laboral</label>
+		                <textarea id = "editor-id" rows = "15" >  
+						</textarea>
+						
+						<textarea id = "editor-id" rows = "15" class = "markdown" data-use-twemoji = "true" >    
+						</textarea>	
+				
+                		
+                  <div class="card-danger">
+                  <label>Enviar:</label><br>
+                  <input  name="enviar" type="submit" class="btn btn-dark" value="Enviar Formulario"/>
+                  
+                  <input name="enviar2" type=""/>
+                  
+            </div>
+        </form>
+    
+            
+    </section>
+    
+       <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+    
+    
+    
+    
+    
+    
+	<script src="../../plugins/jquery/jquery.min.js"></script>
+	<!-
+	<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+	<script src="../../dist/js/adminlte.min.js"></script>
+	<script src="../../dist/js/demo.js"></script>
+	<script type="text/javascript">
+	$(".custom-file-input").on("change", function() {
+	  var fileName = $(this).val().split("\\").pop();
+	  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+	});
+	</script>
+      </div><!-- /.container-fluid -->
+    </section>
+
+
+
+		<!-- jQuery -->
+		<script src="layout/admin/plugins/jquery/jquery.min.js"></script>
+		<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+		<script>
+		  $.widget.bridge('uibutton', $.ui.button)
+		</script>
+		<!-- Bootstrap 4 -->
+		<script src="layout/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- overlayScrollbars -->
+		<script src="layout/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+		<!-- AdminLTE App -->
+		<script src="layout/admin/js/adminlte.js"></script>
+		<!-- AdminLTE for demo purposes -->
+		<script src="layout/admin/js/demo.js"></script>
+		<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+		<script src="layout/admin/js/Chart.min.js"></script>
+
+		<script src="js/jquery.js"> </script>
+		<script src="js/jquery-ui.js"> </script>
+<! - Se admite el estilo bootstrap 4.x. También puede usar el bootstrap css 3.3.xy establecer el `bsVersion` ->
+<link href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel = "hoja de estilo" >  
+<! - Biblioteca de iconos Font Awesome 5.x (marque temas para cambiar esto) ->
+<link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.0.13/css/all.css" >  
+<! - Estilo predeterminado de la biblioteca principal de Krajee Markdown Editor ->
+<link href = "/path/to/css/markdown-editor.css" media = "all" rel = "stylesheet" type = "text / css" />    
+<! - Resalte el estilo JS proporcionado con el complemento para el estilo del código ->
+<link href = "/path/to/plugins/highlight/highlight.min.css" media = "all" rel = "stylesheet" type = "text / css" />    
+<! - jQuery JS Library ->
+<script src = "https://code.jquery.com/jquery-3.2.1.min.js" > </script> 
+<! - Complemento de emojis de Twitter (si necesita emojis de Twitter) ->
+<script src = "https://twemoji.maxcdn.com/2/twemoji.min.js?11.0" > </script> 
+<! - Incluya el complemento de purificación de DOM si necesita purificar la salida HTML (solo es necesario si la entrada HTML markdown-it 
+   esta permitido). Esto debe cargarse antes que markdown-editor.js. ->
+<script src = "/ ruta / a / plugins / purify / purify.min.js" type = "text / javascript"> </script>
+<! - Biblioteca principal de Markdown IT ->
+<script src = "/path/to/plugins/markdown-it/markdown-it.min.js" type = "text / javascript" > </script>  
+<! - Complemento de lista de definiciones de TI de Markdown ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-deflist.min.js" type = "text / javascript" > </script>  
+<! - Complemento de nota al pie de Markdown IT ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-footnote.min.js" type = "text / javascript" > </script>  
+<! - Complemento de abreviaturas de Markdown IT ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-abbr.min.js" type = "text / javascript" > </script>  
+<! - Complemento de subíndice de TI de Markdown ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-sub.min.js" type = "text / javascript" > </script>  
+<! - Complemento de superíndice de TI de Markdown ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-sup.min.js" type = "text / javascript" > </script>  
+<! - Markdown IT Subrayado / Complemento de texto insertado ->
+<script src = "/ruta/to/plugins/markdown-it/markdown-it-ins.min.js" type = "text / javascript" > </script>  
+<! - Complemento Markdown IT Mark ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-mark.min.js" type = "text / javascript" > </script>  
+<! - Complemento Markdown IT SmartArrows ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-smartarrows.min.js" type = "text / javascript" > </script>  
+<! - Complemento de casilla de verificación de Markdown IT ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-checkbox.min.js" type = "text / javascript" > </script>  
+<! - Complemento de salto de línea de caracteres de Asia oriental de Markdown IT ->
+<script src = "/path/to/plugins/markdown-it/markdown-it-cjk-breaks.min.js" type = "text / javascript" > </script>  
+<! - Complemento de Emoji de Markdown IT ->
+<script src = "/ruta/to/plugins/markdown-it/markdown-it-emoji.min.js" type = "text / javascript" > </script>  
+<! - Resalte JS Main Plugin Library para diseñar el código ->
+<script src = "/path/to/plugins/highlight/highlight.min.js" type = "text / javascript" > </script>  
+<! - Bootstrap 4.x Complete Bundle Library (incluido Popper) ->
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" type = "text / javascript" > </script>  
+<! - Biblioteca principal de Krajee Markdown Editor ->
+<script src = "/path/to/js/markdown-editor.js" type = "text / javascript" > </script>  
+<! - Incluya opcionalmente el script theme.js o theme.css para un tema diferente si es necesario ->
+<! - script src = "/ ruta / a / themes / fa5 / theme.js" type = "text / javascript"> </ script ->
+<! - Incluya opcionalmente un script de localización para su idioma si es necesario ->
+<! - script src = "/ ruta / a / js / locales / en.js" type = "text / javascript"> </script>
+		
+		
+</body>
+</html>
+

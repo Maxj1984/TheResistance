@@ -1,0 +1,9 @@
+[25-Oct-2020 21:55:07 America/Chicago] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[25-Oct-2020 21:55:07 America/Chicago] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0
+[25-Oct-2020 21:56:21 America/Chicago] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[25-Oct-2020 21:56:21 America/Chicago] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0
+[25-Oct-2020 22:02:09 America/Chicago] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[25-Oct-2020 22:02:09 America/Chicago] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0
+[25-Oct-2020 22:02:09 America/Chicago] PHP Fatal error:  Class 'Controller' not found in /home2/n4p6n7r2/theresistance.inventweb.site/application/hillary/hillaryController.php on line 3
+[25-Oct-2020 22:02:13 America/Chicago] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[25-Oct-2020 22:02:13 America/Chicago] PHP Warning:  Module 'SourceGuardian' already loaded in Unknown on line 0

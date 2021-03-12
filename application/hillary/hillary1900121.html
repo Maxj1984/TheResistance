@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SOLICITUD DE EMPLEO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	 <link rel="stylesheet" href="dist/css/adminlte.min.css">
+		<body class="hold-transition sidebar-mini">
+			<h1><font>SOLICITUD DE EMPLEO</h1>
+			  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="../../index3.html" class="brand-link">
+           alt="AdminLTE Logo"
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+			<div class="content-wrapper">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>General Form</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">FORMULARIO</li>
+            </ol>
+          </div>
+				<form role="form">
+                <div class="card-body">
+                <form id="contact-form" class="contact-form" method="post" action="enviar.php">
+                  <div class="form-group">
+                  <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">NOMBRE COMPLETO</h3>
+              </div>
+                  <input type="text"name="nombre" class="form-control name-field" required="required"placeholder="INGRESA TU NOMBRE COMPLETO"><br>
+                    <label for="exampleInputEmail1">CORREO ELECTRONICO</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="INGRESA TU CORREO ELECTRONICO">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">CURRICULUM</label>
+                    <div class="custom-file">
+    				<input type="file" class="custom-file-input" id="customFile">
+   					 <label class="custom-file-label" for="customFile">SUBIR CV</label>
+ 				 </div>
+                  <div class="btn-group">
+                    <div class="card-body">
+                  <div class="card card-dark">
+              <div class="card-header">
+                <h3 class="card-title">ESTADO CIVIL</h3>
+              </div>
+				  <button type="button" class="btn btn-warning">SOLTERO (A)</button>
+ 				 <button type="button" class="btn btn-warning">CASADO (A)</button>
+ 				 <br>
+					</div>
+                    <label>SEXO :</label> <br>
+                    <input type="radio"name="sexo">MASCULINO<br><br>
+                    <input type="radio"name="sexo">FEMENINO<br>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">FOTOGRAFIA</label>
+                    <div class="custom-file">
+    				<input type="file" class="custom-file-input" id="customFile">
+   					 <label class="custom-file-label" for="customFile">SUBIR FOTOGRAFÍA</label>
+ 				 </div>
+                </div>
+                  <div class="card-footer">
+                  <button type="submit" class="btn btn-warning">ENVIAR</button>
+                </div>
+              </form>
+            </div> 
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../dist/js/demo.js"></script>
+<script type="text/javascript">
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+</script>
+</body>
+</html>

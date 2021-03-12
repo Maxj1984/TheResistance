@@ -1,0 +1,311 @@
+<!--
+@charset "utf-8";
+/* CSS Document */
+/* Cuerpo del Documento*/
+body {
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
+	margin: 0; /* top right bottom left */
+	height: 100%;	
+}
+/* Elementos Textbox, Textarea, Select*/
+input, textarea, select {	
+	font-family: Verdana; /* font name */
+	font-size: xx-small; /* font size */
+	border-style:solid;
+	border-width:1px;
+	border-color:#CCC;
+}
+/* Elementos Link */
+a:link {
+	text-decoration: none;
+	color:#00F;
+}
+a:visited {
+	text-decoration: none;
+	color:#00F;
+}
+a:hover {
+	text-decoration: none;
+	color:#00F;
+}
+a:active {
+	text-decoration: none;
+	color:#00F;
+}
+/* Titulos de las tablas */
+th{
+	background-image:url(../images/blue.png);
+	color:#FFF;
+	font-style:bold;
+	text-align:left;
+}
+/*Estilo para las Tablas con Datos*/
+.srcTabla{
+	border-style:solid;
+	border-width:1px;
+	border-color:#CCC;		
+}
+.srcTabla td{
+	/*cursor:pointer;	*/
+}
+.BordeEntrada{
+	border-style:solid;
+	border-width:1px;
+	border-color:#CCC;
+	font-size: xx-small; /* font size */
+	font-family:Verdana;
+}
+.BordeFactura{
+	border-style:solid;
+	border-width:1px;
+	border-color:#000;
+	/*font-size: xx-small; /* font size */
+	font-family:Verdana;
+}
+
+.BordeDerecho{	
+	border-top:solid;
+	border-right:solid;
+	border-width:1px;
+	border-color:#000;	
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;
+}
+
+.BordeDerecho-Izquierdo{	
+	
+	border-top:solid;
+	border-left:solid;
+	border-right:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+
+.BordeDerecho-Izquierdo-botton{	
+	
+	border-top:solid;
+	border-bottom:solid;
+	border-left:solid;
+	border-right:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;
+}
+
+.BordeDerecho-Izquierdo-bottonsin_top{	
+	
+	border-bottom:solid;
+	border-left:solid;
+	
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;
+}
+
+.BordeDerecho-Izquierdo_sin_top{	
+	
+	
+	border-left:solid;
+	border-right:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+
+.BordeSoloDerecho{	
+	
+	border-right:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+.BordeSoloDerechoTop{	
+	border-top:solid;
+	border-right:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+
+.BordeSoloIzq{	
+	
+	border-right:solid;
+	border-left:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+.BordeSoloIzqTop{	
+	border-top:solid;
+	border-right:solid;
+	border-left:solid;
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+.BordeTop{		
+	border-top:solid;	
+	border-width:1px;
+	border-color:#000;
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;}
+/*.Titulos{
+	font-family:Verdana;
+	font-size: xx-small; 
+	color:#FFF;
+}*/
+.FuenteFactura{
+	font-family:Verdana;
+	font-size:12px; /* font size */
+	color:#000;
+}
+.footer{
+	font-family:Verdana;
+	font-size:xx-small;
+	color:#FFF;
+}
+.menu{
+	font-family:Verdana;
+	font-size: xx-small; /* font size */
+	color:#000;
+}
+.lineaMenu{
+	background-image:url(../images/linea.gif);
+	background-repeat:repeat-x;
+	
+}
+.CampoObligatorio{
+	border-style:solid;
+	border-width:1px;
+	border-color:#F00;
+	font-size: xx-small; /* font size */
+	font-family:Verdana;
+}
+.CampoAzul{
+	border-style:solid;
+	border-width:1px;
+	border-color:#009;
+	font-size: xx-small; /* font size */
+	font-family:Verdana;
+}
+.letrasRojas{
+	font-family:Verdana;
+	font-size: xx-small; /* font size */
+	color:#F00;
+}
+.src_dato_duplicado{
+	border-style:solid;
+	border-width:1px;
+	border-color:#F00;
+}
+.src_sombra{
+   background-color: #ddd;
+   width: 300px;
+   padding: 10px;
+  	 
+   	box-shadow: 5px 5px 0 #7D7D7D;
+   -webkit-box-shadow: 5px 5px 0 #7D7D7D;
+   -moz-box-shadow: 5px 5px 0 #7D7D7D;
+   	
+	border-radius: 10px;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+}
+/*   MANEJO DE VENTANAS EMERGENTES   */
+
+/* base semi-transparente */
+.opacity{
+	opacity:.75;
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index:1001;
+	opacity:.75;
+	-moz-opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+/* Estilo para lo q este dentro de la ventana modal */
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 350px;
+	height: 150px;
+	margin-left:-200px;
+	margin-top:-150px;
+	padding: 16px;
+	background: #fff;
+	color: #333;
+	z-index:1002;
+	overflow: auto;
+	border:solid;
+	border-color:#666;
+	border-width:3px;
+	overflow-y:hidden;
+}
+.modal_Producto {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 650px;
+	height: 400px;
+	margin-left:-350px;
+	margin-top:-250px;
+	padding: 16px;
+	background: #fff;
+	color: #333;
+	z-index:1002;
+	overflow:auto;
+	border:solid;
+	border-color:#666;
+	border-width:3px;
+	overflow-y:scroll;
+	
+}
+.modal_ProductoRP {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 800px;
+	height: 400px;
+	margin-left:-425px;
+	margin-top:-250px;
+	padding: 16px;
+	background: #fff;
+	color: #333;
+	z-index:1002;
+	overflow:auto;
+	border:solid;
+	border-color:#666;
+	border-width:3px;
+	overflow-y:scroll;	
+}
+close{
+	position: absolute;		
+	width:22px;
+	height:22px;
+}
+/*   COLOR DE LA FILA SELECCIONADA   */
+.row_mouseover{
+	background-color:#85a2e6;
+}
+-->

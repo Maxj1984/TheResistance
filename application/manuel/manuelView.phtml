@@ -1,0 +1,240 @@
+<?php include("bdpdo.php"); 
+//include("recorte.php"); 
+include("sendmail.php");
+?>
+
+<!--Estilo para ImagenPreview-->
+<style media="screen">
+	#uploadForm,
+	#imagereview{
+		width: 500px;
+		margin: 0 auto;
+	}
+	img{
+		max-width: 600px;
+		height: auto;
+	}
+</style>
+
+<!--Estilo de Jcrop-->
+
+
+
+
+
+<link rel="stylesheet" href="<?php echo BASE_URL;?>layout/admin/css/jquery.Jcrop.css" type="text/css"/>
+
+<section class="content">
+    <div class="container-fluid">	
+	<!-- Inicio de formulario Colapsable-->
+	<div class="card card-success">
+		<div class="card-header">
+	        <h3 class="card-title">Solicitud de Empleo</h3>
+	    </div>
+	              
+	    <!--Body Start-->
+	    <div class="card-body">
+	        <form role="form" method="post" enctype="multipart/form-data">
+				<div class="card-body">
+					
+					<div class="form-group" >
+		          		<label>Nombres Completos</label>
+		          		<input name="firtsnames"
+		          		type="text" class="form-control" 
+		          		placeholder="ingrese sus nombres aqui" >
+		          		
+		          		<label>Apellidos Completos</label>
+		          		<input name="lastnames"
+		          		type="text" class="form-control" 
+		          		placeholder="ingrese sus apellidos aqui">
+		          	
+						<label>Dirección de Correo</label>
+						<input type="email" name="email" class="form-control" 
+						placeholder="Ingrese su email aquí">
+					
+		                <label>Número de Teléfono:</label>
+
+		                  <div class="input-group">
+		                    <div class="input-group-prepend">
+		                      <span class="input-group-text"><i 
+		                      class="fas fa-phone"></i></span>
+		                    </div>
+		                    <input name="phone" 
+		                    type="text" class="form-control" 
+		                    data-inputmask='"mask": "+502 9999-9999"' data-mask>
+		                  </div>
+		                  
+		          		<label>Domicilio</label>
+		          		<input name="address" 
+		          		type="text" class="form-control" 
+		          		placeholder="Ingrese su domicilio">
+		          	
+		          		<label>Puesto que Solicita</label>
+		          		<select name="descripcion_emp"class="form-control">
+                          <option>Informatica</option>
+                          <option>Ventas</option>
+                          <option>Contabilidad</option>
+                          <option>Servicio al Cliente</option>
+                          <option>Bodega</option>
+                        </select>
+				
+						<hr>
+						
+						<div>
+							<label>Fotografía:</label>
+								<!--<input type="file" class="form-control" 
+								name="imagen" id="imagen" maxlength="256" placeholder="Imagen">
+								<br>	
+								
+								<img src=""  id="target">
+								-->
+								<br>
+								<div class="card card-warning ">
+								<div class="card-header"><h4 class="card-title">previsualizar</h4></div>
+								<div class="card-body">
+								<iframe width="900" height="500" src="application/manuel/crop/index.php" frameborder="0" allowfullscreen></iframe>
+								</div>
+								</div>
+						</div>
+						
+						<br >
+						<hr >
+						<div>
+						<label>suba sus documentos en PDF</label>
+							<br>
+								<input class="form-control"
+								id="file-es" name="archivo" type="file" accept=".pdf, .PDF">
+								<br>				
+						</div>
+						<hr>
+						<br>
+
+    					<!--Boton enviar general graba en BD y envia el correo-->
+    					<label>Debe haber subido su fotografia y CV para poder enviar el formulario:</label>
+    					<br>
+	                  <input  name="enviar" type="submit" class="btn btn-primary" value="Enviar Formulario"/>
+	                </div>
+
+				</div>
+			
+			</form>
+	    </div>
+	              <!--Body End-->
+	</div>
+	<!-- Final de formulario Colapsable-->
+
+<!-- PIE CHART -->
+
+		<div class="card card-info">
+		    <div class="card-header">
+		        <h3 class="card-title">Empleos más solicitados</h3>
+		    </div>
+		    
+		    <div class="card-body">
+		        <canvas id="pieChart" style="min-height: 250px; height: 400px; 
+		        max-height: 600px; max-width: 100%;"></canvas>
+		    </div>
+		</div>
+	</div>
+</section>
+            
+
+
+<script src="<?php echo BASE_URL;?>layout/admin/js/jquery.Jcrop.min.js"></script>
+<script src="<?php echo BASE_URL;?>layout/admin/js/Chart.min.js"></script>
+
+
+<!-- ChartJS -->
+
+
+<script>$(function () {
+	
+    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+    
+    var pieData        = {
+      labels: <?php echo json_encode($descrip); ?>,
+      datasets: [{
+      data: <?php echo json_encode($datchart);?>,
+      backgroundColor :
+       ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc','#54478c',
+       '#2c699a','#048ba8','#0db39e','#16db93','#83e377','#b9e769','#efea5a',
+       '#f1c453','#f29e4c'],}]}
+    
+    var pieOptions     = {maintainAspectRatio : false, responsive : true, }
+    
+    var pieChart = 
+    new Chart(pieChartCanvas, {type: 'pie', data: pieData,options: pieOptions})
+    
+})</script>
+
+
+
+
+<!--Previsualizar imagen-->
+<script>
+	function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      // Asignamos el atributo src a la tag de imagen
+      $('#target').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+
+$("#imagen").change(function() {
+  readURL(this);
+});
+
+  
+
+</script>
+	
+	
+<!--script de Jcrop-->
+<script type="text/javascript">
+
+var x='';
+var y='';
+var w='';
+var h='';
+
+function updateCoords(c)
+  {
+    $('#x').val(c.x);
+    $('#y').val(c.y);
+    $('#w').val(c.w);
+    $('#h').val(c.h);
+  };
+
+  function checkCoords()
+  {
+    if (parseInt($('#w').val())) return true;
+    alert('Please select a crop region then press submit.');
+    return false;
+  };
+
+function showCoords(c)
+  {
+      // variables can be accessed here as
+      // c.x, c.y, c.x2, c.y2, c.w, c.h
+      //alert(c.x+" "+c.y+" "+c.w+" "+c.h);
+      x=c.x;
+      y=c.y;
+      w=c.w;
+      h=c.h; 
+  };
+
+
+  jQuery(function($){
+    $('#crop').Jcrop({
+    	onSelect: showCoords,
+    	
+        bgOpacity:   .4,
+        aspectRatio: 1
+      
+    });
+     });
+</script>

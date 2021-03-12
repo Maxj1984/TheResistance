@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="C:\wamp64\www\Universidad\Proyecto\application\maria\maria.clpprj">
+ <settings>
+  <PM_URL><![CDATA[http://localhost/]]></PM_URL>
+  <PM_HOME_URL><![CDATA[http://localhost/]]></PM_HOME_URL>
+  <PM_LIBS><![CDATA[]]></PM_LIBS>
+  <PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION>
+  <PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR>
+  <PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE>
+ </settings>
+ <removed value=";"/>
+ <added value=""/>
+ <lastopfiles>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\maria1900143.html"/>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaController.php"/>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaModel.php"/>
+  <lastactivefile name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaModel.php"/>
+ </lastopfiles>
+ <todoblock>
+  <todofile name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaController.php">
+   <todo name="todo por defecto de la clase &lt;br>&quot;;" pos="22;12"/>
+  </todofile>
+ </todoblock>
+ <dbgurls/>
+ <filescache>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaView.phtml" crc="1603741244227"/>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaModel.php" crc="1603672195785"/>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\mariaController.php" crc="1603738503672"/>
+  <file name="C:\wamp64\www\Universidad\Proyecto\application\maria\maria1900143.html" crc="1603741245243"/>
+ </filescache>
+</project>

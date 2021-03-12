@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="C:\wamp64\www\Proyecto\hillary.clpprj">
+ <settings>
+  <PM_URL><![CDATA[http://localhost/Proyecto/]]></PM_URL>
+  <PM_HOME_URL><![CDATA[http://localhost/Proyecto/]]></PM_HOME_URL>
+  <PM_LIBS><![CDATA[]]></PM_LIBS>
+  <PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION>
+  <PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR>
+  <PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE>
+ </settings>
+ <removed value=";"/>
+ <added value=""/>
+ <lastopfiles>
+  <file name="C:\wamp64\www\Proyecto\prueba.html"/>
+  <lastactivefile name=""/>
+ </lastopfiles>
+ <todoblock/>
+ <dbgurls/>
+ <filescache>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\v4-shims.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\v4-shims.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\svg-with-js.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\svg-with-js.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\solid.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\solid.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\regular.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\regular.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\fontawesome.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\fontawesome.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\brands.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\brands.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\all.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\plugins\fontawesome-free\css\all.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.plugins.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.plugins.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.pages.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.pages.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.extra-components.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.extra-components.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.core.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.core.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.components.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\alt\adminlte.components.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\adminlte.min.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\dist\css\adminlte.css" crc="1589920871000"/>
+  <file name="C:\wamp64\www\Proyecto\prueba.html" crc="1603153023312"/>
+ </filescache>
+</project>

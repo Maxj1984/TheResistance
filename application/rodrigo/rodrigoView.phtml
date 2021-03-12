@@ -1,0 +1,83 @@
+<?php
+include("grafica.php");
+include("update.php");
+include("enviar.php");
+?>
+
+<div class="card card-warning">
+              <div class="card-header">
+                <h1 class="card-title" align="center">Solicitud de Empleo</h1>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+	        <form role="form" method="post" enctype="multipart/form-data">
+				<div class="card-body">
+					
+					<div class="form-group" >
+		          		<label>Nombres y apellidos</label>
+		          		<input name="nom-ap"
+		          		type="text" class="form-control" 
+		          		placeholder="ingrese sus datos aqui" >
+		          		
+		          		
+		          	
+						<label>Dirección de Correo</label>
+						<input type="email" name="correo" class="form-control" 
+						placeholder="Ingrese su email aquí">
+					
+		                <label>Número de Teléfono:</label>
+		                  <input name="telefono" type="text" class="form-control"
+		                  placeholder="ingrese su telefono sin guiones ni espacios: 99999999">
+		                  
+		                  
+		          		<label>Domicilio</label>
+		          		<input name="address" 
+		          		type="text" class="form-control" 
+		          		placeholder="Ingrese su domicilio">
+		          	
+		          		<label>Puesto que Solicita</label>
+		          		<select name="plaza"class="form-control">
+                          <option>Informatica</option>
+                          <option>Ventas</option>
+                          <option>Contabilidad</option>
+                          <option>Servicio al Cliente</option>
+                          <option>Bodega</option>
+                        </select>
+		          		
+		          	
+						<label for="exampleInputFile">Suba su Fotografía</label>
+						<div class="input-group">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" 
+									name="perfil">
+									<label class="custom-file-label" 
+									for="exampleInputFile">Elija su Archivo</label>
+								</div>
+								<div class="input-group-append">
+									<span class="input-group-text">Upload</span>
+								</div>
+						</div>	
+					
+						<label for="exampleInputFile">Suba su Curriculum Vitae</label>
+						<div class="input-group">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" 
+									name="docto">
+									<label class="custom-file-label" 
+									for="exampleInputFile">seleccione su pdf</label>
+								</div>
+								<div class="input-group-append">
+									<span class="input-group-text" id="">Upload</span>
+								</div>
+						</div>	
+					<br/>
+	                  <input  name="enviar" type="submit" class="btn btn-primary" value="Enviar"/>
+	                </div>
+
+				</div>
+			
+			</form>
+		</div>
+</div>
+	    
+	

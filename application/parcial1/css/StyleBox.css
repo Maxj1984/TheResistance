@@ -1,0 +1,44 @@
+*{
+	margin: 0px;
+	padding:0px; 
+	
+}
+#Contenedor{
+  padding: 10px;
+  width: 100%;
+  margin: 0px auto;
+  border: 0px solid black;
+  box-sizing: border-box;
+}
+
+#Encabezado{
+	background: #581845;
+	border:2px solid black;
+	color: white;
+}
+
+#Menu_nav{
+	background: #900C3F;
+	color: white;
+}
+
+#Contenido_prin{
+	background: #FF5733;
+	height: 300px;
+	color: white;
+	float: left;
+	width: 80%;
+}
+
+#Barra_lateral{
+	background: #FFC300;
+	height: 300px;
+	color: white;
+	float: left;
+	width: 20%;
+}
+
+#Pie_depagina{
+	background: #C70039;
+	color: white;
+}

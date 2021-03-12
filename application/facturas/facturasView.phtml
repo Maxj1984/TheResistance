@@ -1,0 +1,123 @@
+<section class="content">
+      <div class="container-fluid">
+          
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h2 class="card-title">Datos de cliente</h2>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form id="detail_fact" class="form-horizontal" method="post">
+	                <div class="card-body">
+	                  	<div class="form-group">
+			                  	<div class="row">
+				                  	<div class="col-sm-4">
+				                  	<label>fecha:</label>
+			                        <input type="date" class="form-control datetimepicker-input" id="fecha" name="fecha" data-target="#reservationdate">
+			                        </div>
+			                        
+			                        <div class="col-sm-4">
+				                  	<label for="id_cliente">Id Cliente</label>
+									<input type="text" class="form-control" id="id_cliente" name="id_cliente" placeholder="Id Cliente">
+									</div>
+									
+									<div class="col-sm-4">
+				                    <label >Nit</label>
+				                    <input type="text" class="form-control" id="nit_cliente" name="nit_cliente" placeholder="nit">
+				                  	</div>
+				                  	
+									
+									<div class="clearfix"></div>
+				                  	<div class="clearfix visible-sm-block"></div>
+				                  	
+									<div class="col-sm-6">
+									<br>
+				                    <label >Nombre o razón social</label>
+				                    <input type="text" class="form-control" id="descripcion_cliente" name="descripcion_cliente" placeholder="nombre">
+				                    </div>
+				                    <div class="col-sm-6">
+				                    <br>
+				                    <label >Dirección</label>
+				                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="dirección">
+				                    </div>
+				                    
+			                  	</div>
+	                  	</div>
+	                </div>
+	                
+	                <div class="card-body">
+	                	<div class="form-group">
+		                	<div class="row">
+		                		<p>
+		                			<div class="col-sm-2">
+		                			<label>ID Producto:</label> <br>
+		                			<input id="id_producto" name="id_producto"class="form-control" type="text" placeholder="ingrese ID del producto"><br>
+		                			</div>
+		                		</p>
+		                	    <p>
+		                	    	<div class="col-sm-4">
+		                	    	<label>Producto:</label> <br>
+		                	    	<input id="descripcion" name="descripcion" class="form-control" type="text" placeholder="Descripcion..."><br>
+		                	    	</div>
+		                	    </p>
+		                	    <p>
+		                	    	<div class="col-sm-3">
+		                	    	<label>cantidad:</label> <br>
+		                	    	<input id="cantidad" name="cantidad" class="form-control" type="text" placeholder="Cantidad a comprar"> <br>
+		                	    	</div>
+		                	    </p>
+		                	    <p>
+		                	    	<div class="col-sm-3">
+		                	    	<label>Precio:</label> <br>
+		                	    	<input id="precio" name="precio" class="form-control" type="text" placeholder="total producto"> <br>
+		                	    	</div>
+		                	    </p>
+		                	</div>
+	                	    <button id="adicionar" class="btn btn-success" type="button">Agregar a la lista</button>
+	                	</div>
+
+
+						<p>Productos comprados:
+							<div id="adicionados"></div>
+								</p>
+								<table  id="mytable" class="display table" style="width: 100%">
+									<tr>
+										<th>Producto</th>
+										<th>Cantidad</th>
+										<th>Precio</th>
+										<th>Total Productos</th>
+										<th>Eliminar</th>
+									</tr>
+									<tfoot>
+										<tr>
+											<th> </th>
+											<th> </th>
+											<th> </th>
+											<th>Total</th>
+											<th> </th>
+										</tr>
+									</tfoot>
+								</table>
+					</div>
+					
+						<div class="col-sm-3">
+				                    <br>
+				                    <label >Total Factura</label>
+				                    <input type="text" value="" class="form-control" disabled="">
+				                    </div><br/>
+					
+	        
+	                <!-- /.card-body -->
+						<div class="card-footer">
+			                  <button type="button" id="aceptar" class="btn btn-info">Grabar</button>
+			                </div>
+			            
+                
+              	</form>
+              
+            </div>
+        </div>
+    </section>
+    
+   

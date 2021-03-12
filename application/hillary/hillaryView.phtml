@@ -1,0 +1,130 @@
+<?php include ("cn.php");
+include("email.php");
+?>
+<section class="content">
+<h1>SOLICITUD DE EMPLEO</h1>
+<form role="form"method="post" enctype="multipart/form-data">
+    <div class="card-body">
+     <div class="form-group">
+	            <div class="card card-warning">
+		            <div class="card-header">
+			      		  <h3 class="card-title">DATOS PERSONALES</h3>
+		            </div>
+		        </div>
+	 </div>
+		            <label for="exampleInputEmail1">NOMBRE COMPLETO</label>
+	                <input type="text"name="nombre" class="form-control name-field" 
+	                required="required"placeholder="INGRESA TU NOMBRE COMPLETO"><br>
+	                
+	                <label for="exampleInputEmail1">CORREO ELECTRONICO</label>
+	                <input type="email"name="email" class="form-control" id="exampleInputEmail1" 
+	                placeholder="INGRESA TU CORREO ELECTRONICO">
+	                
+	                <label for="exampleInputEmail1">DIRECCION</label>
+	                <input type="dirección"name="direccion" class="form-control" id="exampleInputEmail1" 
+	                placeholder="INGRESA TU DIRECCION">
+	 </div>
+	 
+	            <div class="form-group">
+	               <h1 class="card-title">NIVEL DE ESTUDIOS</h1>
+     			  <select name="grado"class="form-control">
+                          <option>BASICOS </option>
+                          <option>DIVERSIFICADO</option>
+                          <option>UNIVERSIDAD</option>
+                        </select>
+                        <label>ÁREA DE TRABAJO</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Ventas</option>
+                          <option>Contabilidad</option>
+                          <option>Analista Finanzas</option>
+                          <option>Servicio al Cliente</option>
+                          <option>Bodega</option>
+                          <option>Informatica</option>
+                        </select>
+	                <label for="exampleInputEmail1">TELEFONO DE CONTACTO</label>
+	                <input type="numero" name="numero"class="form-control" id="exampleInputEmail1" 
+	                placeholder="INGRESA TU NUMERO DE TELEFONO">
+	                </div>
+	                
+                <div class="btn-group">
+                    <div class="card-body">
+                  <div class="card card-dark">
+              <div class="card-header">
+                <h3 class="card-title">ESTADO CIVIL</h3>
+                <select name="descripcion"class="form-control">
+                          <option>SOLTERO (a)</option>
+                          <option>CASADO (a)</option>
+                          <option>UNIDO (a)</option>
+                           <option>DIVORCIADO (a)</option>
+                        </select>
+ 			  <div class="form-group">
+					<label>SEXO</label>
+		          		<select name="descripcion"class="form-control">
+                          <option>Masculino</option>
+                          <option>Femenino</option>
+                        </select>
+                        </div>
+                        </div>
+                          </div>
+                            </div>
+                              </div>
+                        
+                  <div class="form-group">
+                  	<label for="exampleInputFile">CURRICULUM</label>
+                  		<div class="custom-file">
+                  			<input type="file"name="cv" class="custom-file-input" id="customFile">
+                  			<label class="custom-file-label" for="customFile">SUBIR CV</label>
+                  		</div>
+                    <label for="exampleInputFile">FOTOGRAFIA</label>
+                    <div class="custom-file">
+                     <input type="file" class="custom-file-input" id="customFile">
+   					<label class="custom-file-label" for="customFile">SUBIR FOTOGRAFÍA</label>
+ 				 	</div>
+                </div>
+                
+                  <div class="card-footer">
+                  <input type = "submit" name= "enviar" value="ENVIAR"/>
+            </div>
+        </form>
+    </section>
+    
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../dist/js/demo.js"></script>
+<script type="text/javascript">
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+<div class="card card-info">
+<div class="card card-inverse" style="background-color: #aaff00; border-color: #00007f;">
+		    <div class="card-header">
+		        <h3 class="card-title">PLAZAS MAS SOLICITADAS</h3>
+		    </div>
+		    </div>
+		    <div class="card-body">
+		        <canvas id="pieChart" style="min-height: 350px; height: 350px; 
+		        max-height: 350px; max-width: 200%;"></canvas>
+		    </div>
+		</div>
+	</div>
+	<script>$(function () {
+	
+    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+    
+    var pieData        = {
+      labels: <?php echo json_encode($json); ?>,
+      datasets: [{
+      data: <?php echo json_encode($json2);?>, 
+      backgroundColor :
+       ['#000000', '#aaff00', '#ff0000', '#00007f', '#ff5500'],}]}
+    
+    var pieOptions     = {maintainAspectRatio : false, responsive : true, }
+    
+    var pieChart = 
+    new Chart(pieChartCanvas, {type: 'pie', data: pieData,options: pieOptions})
+    
+})</script>

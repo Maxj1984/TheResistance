@@ -1,0 +1,52 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+header{
+	background: #2c3e50;
+	color: #fff;
+	text-align:center;
+}
+nav{
+	color: #fff;
+}
+.nav-link{
+	float: center;
+  display: inline;
+}
+
+.main{
+	background: #f2f2f2;
+}
+h1{
+  font-family: Tw Cen MT;
+  font-style: italic;
+  font-size: 60px;
+}
+h2{
+  font-size: 18px;
+}
+h3{
+font-size: 14px;	
+}
+p{
+	font-size: 10px;
+}
+.color1{
+	background: #34495e;
+	color: #fff;
+}
+
+aside{
+	background: #c0392b;
+	color: #fff;
+}
+footer{
+	background: #2c3e50;
+	font-size: 8px;
+}
+
+.link{
+  color: #000;
+}

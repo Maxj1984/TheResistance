@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<title>Documento de Bootstrap</title>
+		<link rel="icon" href="boot.ico">
+		 <link rel="stylesheet" href="styles.css">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<!-- la siguiente linea de codigo permite cargar los complementos de bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	</head>
+
+	<body>
+			<header>
+				<nav class="navbar navbar-expand-lg navbar-light bg-#2c3e50">
+				  	<a class="navbar-brand text-white" href="#">
+				  		<img src="Bootstrap_logo.png" width="35">Página con Bootstrap</a>
+				 	 <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  	</button>
+				  	<div class="container">
+				  		<div class="collapse navbar-collapse" id="navbarNav">
+						    <ul class="navbar-nav">
+							      <li class="nav-item">
+							        <a class="nav-link text-white" href="index.html"> Página Principal</a>
+							      </li>
+							      <li class="nav-item">
+							        <a class="nav-link text-white" href="EjemplosBootstrap.html"> Bootstrap </a>
+							      </li>
+							      <li class="nav-item text-white">
+							        <a class="nav-link  text-white" href="sitioenconstruccion.html">Proyecto Final</a>
+							      </li>
+						    </ul>
+				  		</div>
+				  	</div>
+				  	
+				</nav>
+			</header>		
+
+		<!-- en Bootstrap todo el contenido se divide en 12 columnas, por ello manejamos las clases col-xs col-sm col-md col-lg-->
+
+		<div class="container">  <!-- div container permite centrar el contendio -->
+				<section class="main row"> <!-- main es la seccion principal, con row se establece con una fila de contenido -->
+					<!-- col-md permite establecer un tamaño en columnas que ocupara el contenido -->
+					<article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+						<h2>Articulo Principal</h2>
+						<P class ="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+					</article>
+
+					<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3"> <!-- main es la barra lateral -->
+						<h2>Barra Lateral</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</aside>
+				</section>
+
+				<div class="row">
+					<div class="color1 col-xs-12 col-sm-6 col-md-3">
+						<h2>Articulo Inferior 1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="clearfix visible-sm-block"></div><!-- clearfix permite limpiar errores de sitio web en el tamaño, el visible-sm determina a partir de que tamaño empieza a ejecutarse -->
+
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<h2>Articulo Inferior 2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>	
+					<div class="clearfix visible-sm-block"></div>
+
+					<div class="color1 col-xs-12 col-sm-6 col-md-3">
+						<h2>Articulo Inferior 3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>	
+					<div class="clearfix visible-sm-block"></div>
+
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<h3>Articulo Inferior 4</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>	
+
+				</div>
+		</div>
+		<footer>
+			<div class="container">
+				<h3>The Resistance &copy; 2020 | Programación 4</h3>
+			</div>
+			
+		</footer>
+
+
+
+		<!-- las siguientes lineas de codigo permite cargar contenidos js de bootstrap y Jquery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
